@@ -1,0 +1,171 @@
+.registerMain{
+    height: 100vh;
+    overflow: hidden;
+
+.mainContainer{
+    display: flex;
+    height: 100%;
+
+    .leftIllustration{
+        width: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(245, 245, 245);
+        .mainIllustration{
+            transform: translateY(50px);
+            height: auto;
+            width: 80%;
+        }
+       
+    }
+    .rightContainer{
+        width: 55%;
+        background: rgb(128, 0, 128);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .heading{
+            img{
+                height: 100px;
+                width: auto;
+            }
+            h1{
+                font-size: 3rem;
+                letter-spacing: 2px;
+                color: white;
+            }
+        }
+        .formContainer{
+            margin: 40px 0;
+            width: 20rem;
+            form{
+               
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                }
+                label{
+                    position: absolute;
+                    font-size: 0.8rem;
+                    font-weight: 500;
+                    pointer-events: none;
+                    touch-action: manipulation;
+                    letter-spacing: 0.6px;
+                    transition: all 0.3s ease;
+                    color: rgb(196, 196, 196);
+                    top: 18px;
+                    left: 8px;
+                }
+
+                input {
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                    margin: 5px 0 30px 0;
+                    border: none;
+                    border-bottom: 4px solid rgb(71, 0, 71);
+                    font-family: inherit;
+                    -webkit-appearance: none;
+                    border-radius: 4px;
+                    padding: 3% 2%;
+                    cursor: text;
+                    background: rgba(104, 0, 104, 0.479);
+                    &:focus{
+                        outline: none;
+                        border-bottom: 4px solid rgb(248, 5, 228);
+                    }
+                }
+                input:focus+label,
+                input:focus-within+label,
+                input:not([value=""])+label
+                {
+                    top: -18px;
+                    color: rgb(255, 154, 242);
+                    font-size: 0.8rem;
+                    letter-spacing: 1.2px;
+                }
+                
+               .nameContainer{
+                   position: relative;
+               }
+               .emailContainer{
+                   position: relative;
+               }
+               .passwordContainer{
+                   position: relative;
+               }
+               .confirmPassContainer{
+                   position: relative;
+               }
+
+               .submitBtn{
+                   border: none;
+                   border-radius: 5px;
+                   outline: none;
+                   width: 10rem;
+                   padding: 2%;
+                   font-size: 0.95rem;
+                   color: white;
+                   font-weight: 500;
+                   letter-spacing: 1px;
+                   background: rgb(31, 31, 31);
+                   transition: all 0.3s linear;
+                   &:hover{
+                       background: black;
+                   }
+               }  
+
+               .googleBtn,.facebookBtn{
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    height: 40px;
+                    width: 40px;
+                    margin-top: 20px;
+                    margin-right: 20px;
+                    svg{
+                        font-size: 2.4rem;
+                        transition: all 0.6s ease;
+                        color: rgb(59, 0, 59);
+                    }
+               }
+               .googleBtn svg:hover{
+                   color: rgb(167, 44, 0);
+               }
+               .facebookBtn svg:hover{
+                   color: rgb(0, 0, 189);
+               }
+            }
+            p{
+                margin-top: 20px;
+                font-size: 0.85rem;
+                font-weight: 500;
+                color: white;
+                a{
+                    color: blue;
+                    position: relative;
+                    &::after{
+                        position: absolute;
+                        content: "";
+                        bottom: -4px;
+                        left: 4px;
+                        height: 2px;
+                        width: 100%;
+                        background: blue;
+                        transition: all 0.6s ease;
+                        transform: scaleX(0);
+                        transform-origin: left;
+                    }
+                    &:hover::after{
+                        transform-origin: right;
+                        transform: scaleX(1);
+                    }
+                }
+            }
+        }
+    }
+}
+}

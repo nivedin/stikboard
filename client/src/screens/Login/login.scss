@@ -1,0 +1,169 @@
+.loginMain{
+    height: 100vh;
+    overflow: hidden;
+
+.mainContainer{
+    display: flex;
+    height: 100%;
+    .leftContainer{
+       width: 40%;
+       height: 100%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       .leftMainImg{
+           height: auto;
+           width: 65%;
+       }
+    }
+    .rightContainer{
+        padding-top: 80px;
+       width: 60%;
+       background: purple;
+       text-align: center;
+       .heading{
+        img{
+            height: 100px;
+            width: auto;
+        }
+        h1{
+            font-size: 3rem;
+            letter-spacing: 2px;
+            color: white;
+        }
+    }
+    .formContainer{
+        margin: 30px 0;
+        form{
+            width: 20rem;
+            margin: 0 auto;
+            div{
+                display: flex;
+                flex-direction: column;
+            }
+            label{
+                position: absolute;
+                font-size: 0.8rem;
+                font-weight: 500;
+                pointer-events: none;
+                touch-action: manipulation;
+                letter-spacing: 0.6px;
+                transition: all 0.3s ease;
+                color: rgb(196, 196, 196);
+                top: 18px;
+                left: 8px;
+            }
+
+            input {
+                font-size: 1.1rem;
+                font-weight: 500;
+                margin: 5px 0 30px 0;
+                border: none;
+                border-bottom: 4px solid rgb(71, 0, 71);
+                font-family: inherit;
+                -webkit-appearance: none;
+                border-radius: 4px;
+                padding: 3% 2%;
+                cursor: text;
+                background: rgba(104, 0, 104, 0.479);
+                &:focus{
+                    outline: none;
+                    border-bottom: 4px solid rgb(248, 5, 228);
+                }
+            }
+            input:focus+label,
+            input:focus-within+label,
+            input:not([value=""])+label
+            {
+                top: -18px;
+                color: rgb(255, 154, 242);
+                font-size: 0.8rem;
+                letter-spacing: 1.2px;
+            }
+            .emailContainer{
+                position: relative;
+            }
+            .passwordContainer{
+                position: relative;
+            }
+            .loginBtn{
+                border: none;
+                border-radius: 5px;
+                outline: none;
+                width: 10rem;
+                padding: 2%;
+                font-size: 0.9rem;
+                font-weight: 500;
+                color: white;
+                letter-spacing: 1.8px;
+                background: rgb(32, 32, 32);
+                margin-bottom: 10px;
+                transition: all 0.3s linear;
+                &:hover{
+                    background: black;
+                }
+            } 
+            .socialLogin{
+                display: flex;
+                margin: 10px auto;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                button{
+                    margin-right: 20px;
+                    border: none;
+                    outline: none;
+                    background: transparent;
+                    font-size: 2rem;
+                    svg{
+                        color: rgb(77, 0, 77);
+                        transition: all 0.6s linear;
+                    }
+                }
+                .googleBtn svg:hover{
+                    color: rgb(167, 44, 0);
+                }
+                .facebookBtn svg:hover{
+                    color: rgb(0, 0, 189);
+                }
+            }
+            .forgetLink{
+               
+                margin: 20px 0;
+                font-size: 0.8rem;
+                font-weight: 500;
+                color: rgb(0, 0, 122);
+               
+            }
+            .signLink{
+                color: white;
+                font-weight: 500;
+                font-size: 0.88rem;
+                a{
+                    color: rgb(0, 0, 133);
+                    position: relative;
+                    &::after{
+                        position: absolute;
+                        content: "";
+                        bottom: -4px;
+                        left: 2px;
+                        height: 2px;
+                        width: 100%;
+                        background: blue;
+                        transition: all 0.6s ease;
+                        transform: scaleX(0);
+                        transform-origin: left;
+                    }
+                    &:hover::after{
+                        transform-origin: right;
+                        transform: scaleX(1);
+                    }
+                }
+            }
+            
+        }
+    }
+
+    }
+}
+}
