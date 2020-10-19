@@ -11,6 +11,7 @@
 # production
 /build
 
+config.env
 .env-*
 .env
 .env.example
